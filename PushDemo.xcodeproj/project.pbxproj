@@ -22,6 +22,7 @@
 		C91DFEEB20E31EC100025E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C91DFEEE20E31EC100025E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91DFEF020E31EC100025E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9FDCCFF20E46FBC003D54B6 /* PushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		C91DFEE320E31EC000025E08 /* PushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C9FDCCFF20E46FBC003D54B6 /* PushDemo.entitlements */,
 				C91DFEE420E31EC000025E08 /* AppDelegate.swift */,
 				C91DFEE620E31EC000025E08 /* ViewController.swift */,
 				C91DFEE820E31EC000025E08 /* Main.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					C91DFEE020E31EC000025E08 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -280,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25V97QMNV5;
 				INFOPLIST_FILE = PushDemo/Info.plist;
@@ -298,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25V97QMNV5;
 				INFOPLIST_FILE = PushDemo/Info.plist;
