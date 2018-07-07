@@ -12,7 +12,33 @@
 		C91DFEEA20E31EC000025E08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DFEE820E31EC000025E08 /* Main.storyboard */; };
 		C91DFEEC20E31EC100025E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91DFEEB20E31EC100025E08 /* Assets.xcassets */; };
 		C91DFEEF20E31EC100025E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DFEED20E31EC100025E08 /* LaunchScreen.storyboard */; };
+		C91F070320F0FB06007CD617 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F070220F0FB06007CD617 /* NotificationService.swift */; };
+		C91F070720F0FB06007CD617 /* ImageServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C91F070020F0FB06007CD617 /* ImageServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C91F070520F0FB06007CD617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C91DFED920E31EC000025E08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C91F06FF20F0FB06007CD617;
+			remoteInfo = ImageServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C91F070B20F0FB06007CD617 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C91F070720F0FB06007CD617 /* ImageServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C91DFEE120E31EC000025E08 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,11 +48,21 @@
 		C91DFEEB20E31EC100025E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C91DFEEE20E31EC100025E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91DFEF020E31EC100025E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91F070020F0FB06007CD617 /* ImageServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ImageServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91F070220F0FB06007CD617 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C91F070420F0FB06007CD617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9FDCCFF20E46FBC003D54B6 /* PushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C91DFEDE20E31EC000025E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C91F06FD20F0FB06007CD617 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DFEE320E31EC000025E08 /* PushDemo */,
+				C91F070120F0FB06007CD617 /* ImageServiceExtension */,
 				C91DFEE220E31EC000025E08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DFEE120E31EC000025E08 /* PushDemo.app */,
+				C91F070020F0FB06007CD617 /* ImageServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +104,15 @@
 			path = PushDemo;
 			sourceTree = "<group>";
 		};
+		C91F070120F0FB06007CD617 /* ImageServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C91F070220F0FB06007CD617 /* NotificationService.swift */,
+				C91F070420F0FB06007CD617 /* Info.plist */,
+			);
+			path = ImageServiceExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,15 +123,34 @@
 				C91DFEDD20E31EC000025E08 /* Sources */,
 				C91DFEDE20E31EC000025E08 /* Frameworks */,
 				C91DFEDF20E31EC000025E08 /* Resources */,
+				C91F070B20F0FB06007CD617 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C91F070620F0FB06007CD617 /* PBXTargetDependency */,
 			);
 			name = PushDemo;
 			productName = PushDemo;
 			productReference = C91DFEE120E31EC000025E08 /* PushDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C91F06FF20F0FB06007CD617 /* ImageServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C91F070A20F0FB06007CD617 /* Build configuration list for PBXNativeTarget "ImageServiceExtension" */;
+			buildPhases = (
+				C91F06FC20F0FB06007CD617 /* Sources */,
+				C91F06FD20F0FB06007CD617 /* Frameworks */,
+				C91F06FE20F0FB06007CD617 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageServiceExtension;
+			productName = ImageServiceExtension;
+			productReference = C91F070020F0FB06007CD617 /* ImageServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -104,6 +170,9 @@
 							};
 						};
 					};
+					C91F06FF20F0FB06007CD617 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = C91DFEDC20E31EC000025E08 /* Build configuration list for PBXProject "PushDemo" */;
@@ -120,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				C91DFEE020E31EC000025E08 /* PushDemo */,
+				C91F06FF20F0FB06007CD617 /* ImageServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +205,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C91F06FE20F0FB06007CD617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -147,7 +224,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C91F06FC20F0FB06007CD617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91F070320F0FB06007CD617 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C91F070620F0FB06007CD617 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C91F06FF20F0FB06007CD617 /* ImageServiceExtension */;
+			targetProxy = C91F070520F0FB06007CD617 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C91DFEE820E31EC000025E08 /* Main.storyboard */ = {
@@ -286,6 +379,7 @@
 		C91DFEF420E31EC100025E08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +399,7 @@
 		C91DFEF520E31EC100025E08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +411,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sleekible.PushDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C91F070820F0FB06007CD617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25V97QMNV5;
+				INFOPLIST_FILE = ImageServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sleekible.PushDemo.ImageServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C91F070920F0FB06007CD617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25V97QMNV5;
+				INFOPLIST_FILE = ImageServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sleekible.PushDemo.ImageServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +471,15 @@
 			buildConfigurations = (
 				C91DFEF420E31EC100025E08 /* Debug */,
 				C91DFEF520E31EC100025E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C91F070A20F0FB06007CD617 /* Build configuration list for PBXNativeTarget "ImageServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91F070820F0FB06007CD617 /* Debug */,
+				C91F070920F0FB06007CD617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
