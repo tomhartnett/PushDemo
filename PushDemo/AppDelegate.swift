@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let likeAction = UNNotificationAction(identifier: "likeAction", title: "Like", options: [.authenticationRequired])
+        
+        let imageCategory = UNNotificationCategory(identifier: "imageCategory", actions: [likeAction], intentIdentifiers: [], options: [])
+        notificationCenter.setNotificationCategories([imageCategory])
+        
         application.registerForRemoteNotifications()
         
         return true
