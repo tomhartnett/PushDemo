@@ -22,6 +22,12 @@ class NotificationService: UNNotificationServiceExtension {
         
         if let mutableContent = bestAttemptContent {
             
+            // Check for a threadIdentifier in the payload to use for grouping related messages.
+            if let threadId = mutableContent.userInfo["thread-id"] as? String {
+            
+                mutableContent.threadIdentifier = threadId
+            }
+            
             // Retrieve the URL of the image from the payload.
             if let urlString = mutableContent.userInfo["imageUrl"] as? String, let url = URL(string: urlString) {
                 

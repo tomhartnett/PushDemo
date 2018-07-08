@@ -31,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let imageCategory = UNNotificationCategory(identifier: "imageCategory", actions: [likeAction], intentIdentifiers: [], options: [])
         notificationCenter.setNotificationCategories([imageCategory])
         
+        // Note:  you need to set the UNNotificationExtensionCategory value to match above category identifier - e.g. 'imageCategory' - in order
+        // for the system to send the notification to your content extension.
+        
         application.registerForRemoteNotifications()
         
         return true
