@@ -17,16 +17,11 @@ class NotificationService: UNNotificationServiceExtension {
     var currentDownloadTask: URLSessionDownloadTask?
 
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+        
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         if let mutableContent = bestAttemptContent {
-            
-            // Check for a threadIdentifier in the payload to use for grouping related messages.
-            if let threadId = mutableContent.userInfo["thread-id"] as? String {
-            
-                mutableContent.threadIdentifier = threadId
-            }
             
             // Retrieve the URL of the image from the payload.
             if let urlString = mutableContent.userInfo["imageUrl"] as? String, let url = URL(string: urlString) {
@@ -82,15 +77,6 @@ class NotificationService: UNNotificationServiceExtension {
         // Cancel running download task.
         if let downloadTask = currentDownloadTask {
             downloadTask.cancel()
-        }
-
-        if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
-            
-            // Check for "backup text" in payload, but if not found use hard-coded string.
-            let alternateText = bestAttemptContent.userInfo["alternateText"] as? String ?? "Image download failed"
-            bestAttemptContent.body = alternateText
-            
-            contentHandler(bestAttemptContent)
         }
     }
     
