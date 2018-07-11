@@ -1,8 +1,8 @@
 //
 //  NotificationViewController.swift
-//  ImageContentExtension
+//  ImageContentExtensionV1
 //
-//  Created by Tom Hartnett on 7/7/18.
+//  Created by Tom Hartnett on 7/11/18.
 //  Copyright © 2018 Sleekible, LLC. All rights reserved.
 //
 
@@ -17,24 +17,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        likeLabel.text = "♡"
-        likeLabel.isHidden = false
-        likeLabel.layer.opacity = 1.0
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(likeLabelTapped))
-        likeLabel.addGestureRecognizer(tapGesture)
-        likeLabel.isUserInteractionEnabled = true
         
-        // Note: you must add the UNNotificationExtensionUserInteractionEnabled entry to the plist file for this to work.
-    }
-    
-    @objc func likeLabelTapped() {
-        
-        if likeLabel.text == "♡" {
-            likeLabel.text = "❤️"
-        } else {
-            likeLabel.text = "♡"
-        }
+        likeLabel.isHidden = true
     }
     
     func didReceive(_ notification: UNNotification) {
@@ -51,7 +35,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             if let image = imageView.image {
                 let scaledRatio = view.bounds.width / image.size.width
                 preferredContentSize = CGSize(width: scaledRatio * image.size.width,
-                                              height: scaledRatio * image.size.height)
+                                              height: (scaledRatio * image.size.height) + 37)
             }
             
             // Note: inital size of view is determined by UNNotificationExtensionInitialContentSizeRatio
@@ -67,7 +51,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             
         }
     }
-    
+
     func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
         
         NSLog("Content Extension didReceive: \(response.actionIdentifier)")
@@ -76,17 +60,6 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         if response.actionIdentifier == "likeAction" {
             
             likeLabel.isHidden = false
-            
-            let unlikeAction = UNNotificationAction(identifier: "unlikeAction", title: "Unlike", options: [.authenticationRequired])
-            extensionContext?.notificationActions = [unlikeAction]
-        }
-        
-        if response.actionIdentifier == "unlikeAction" {
-            
-            likeLabel.isHidden = true
-            
-            let likeAction = UNNotificationAction(identifier: "likeAction", title: "Like", options: [.authenticationRequired])
-            extensionContext?.notificationActions = [likeAction]
         }
         
         // Dont dismiss extension to allow further interaction.
@@ -94,10 +67,10 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         
         // You could also dismiss the notification here.
         // Or, dismiss it and then forward the action on to AppDelegate.
-//        case doNotDismiss
-//
-//        case dismiss
-//
-//        case dismissAndForwardAction
+        //        case doNotDismiss
+        //
+        //        case dismiss
+        //
+        //        case dismissAndForwardAction
     }
 }

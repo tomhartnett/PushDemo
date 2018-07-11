@@ -54,7 +54,6 @@ class NotificationService: UNNotificationServiceExtension {
                                                                        options: options) {
                                 
                                 mutableContent.attachments = [attachment]
-                                mutableContent.categoryIdentifier = "imageCategory"
                             }
                         }
                     }

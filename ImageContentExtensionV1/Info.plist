@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>ImageContentExtension</string>
+	<string>ImageContentExtensionV1</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,10 +24,10 @@
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
-			<key>UNNotificationExtensionUserInteractionEnabled</key>
+			<key>UNNotificationExtensionDefaultContentHidden</key>
 			<true/>
 			<key>UNNotificationExtensionCategory</key>
-			<string>imageCategory</string>
+			<string>imageCategoryV1</string>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
 			<real>0.5</real>
 		</dict>

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let likeAction = UNNotificationAction(identifier: "likeAction", title: "Like", options: [.authenticationRequired])
         
-        let imageCategory = UNNotificationCategory(identifier: "imageCategory", actions: [likeAction], intentIdentifiers: [], options: [])
+        let imageCategory = UNNotificationCategory(identifier: "imageCategoryV1", actions: [likeAction], intentIdentifiers: [], options: [])
         notificationCenter.setNotificationCategories([imageCategory])
         
         // Note:  you need to set the UNNotificationExtensionCategory value to match above category identifier - e.g. 'imageCategory' - in order
