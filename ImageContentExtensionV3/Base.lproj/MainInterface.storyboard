@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cxj-Ky-9vv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="EuU-n3-WmG">
+            <objects>
+                <viewController id="Cxj-Ky-9vv" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="ImageContentExtensionV3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="MLf-6D-5vV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-wa-BnS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnM-fB-eEU">
+                                <rect key="frame" x="8" y="209" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="👍"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="Cxj-Ky-9vv" eventType="touchUpInside" id="U0c-wW-Kgr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You liked this image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlJ-41-d7x">
+                                <rect key="frame" x="46" y="219" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AlJ-41-d7x" firstAttribute="leading" secondItem="VnM-fB-eEU" secondAttribute="trailing" constant="8" id="0k3-lq-2Xy"/>
+                            <constraint firstItem="nAS-Gr-jzV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AlJ-41-d7x" secondAttribute="trailing" symbolic="YES" id="5kQ-6R-fFL"/>
+                            <constraint firstItem="uoF-wa-BnS" firstAttribute="trailing" secondItem="nAS-Gr-jzV" secondAttribute="trailing" id="6LN-fu-quJ"/>
+                            <constraint firstItem="uoF-wa-BnS" firstAttribute="top" secondItem="nAS-Gr-jzV" secondAttribute="top" id="ARS-BG-oRP"/>
+                            <constraint firstItem="VnM-fB-eEU" firstAttribute="leading" secondItem="nAS-Gr-jzV" secondAttribute="leading" constant="8" id="Di7-uj-kXI"/>
+                            <constraint firstItem="uoF-wa-BnS" firstAttribute="leading" secondItem="nAS-Gr-jzV" secondAttribute="leading" id="FP6-b7-DQ3"/>
+                            <constraint firstItem="VnM-fB-eEU" firstAttribute="top" secondItem="uoF-wa-BnS" secondAttribute="bottom" id="TYT-nS-9hv"/>
+                            <constraint firstItem="AlJ-41-d7x" firstAttribute="centerY" secondItem="VnM-fB-eEU" secondAttribute="centerY" id="XJh-XH-yd4"/>
+                            <constraint firstItem="nAS-Gr-jzV" firstAttribute="bottom" secondItem="uoF-wa-BnS" secondAttribute="bottom" constant="41" id="cyq-qT-LgX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nAS-Gr-jzV"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="250"/>
+                    <connections>
+                        <outlet property="imageView" destination="uoF-wa-BnS" id="Ozn-Fg-ROJ"/>
+                        <outlet property="likeButton" destination="VnM-fB-eEU" id="P7Q-eZ-mbh"/>
+                        <outlet property="likeLabel" destination="AlJ-41-d7x" id="5mm-Pm-Ezt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTr-Xq-vBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
+        </scene>
+    </scenes>
+</document>

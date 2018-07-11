@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍 You liked this image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3L-Uw-QEg">
-                                <rect key="frame" x="8" y="221" width="179" height="21"/>
+                                <rect key="frame" x="16" y="221" width="179" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,8 @@
                             <constraint firstItem="gnv-Kx-0kw" firstAttribute="leading" secondItem="Nb2-EM-e6W" secondAttribute="leading" id="CYX-13-7G7"/>
                             <constraint firstItem="gnv-Kx-0kw" firstAttribute="top" secondItem="Nb2-EM-e6W" secondAttribute="top" id="LfD-Gd-4qQ"/>
                             <constraint firstItem="Nb2-EM-e6W" firstAttribute="bottom" secondItem="gnv-Kx-0kw" secondAttribute="bottom" constant="37" id="Ra0-nX-Aru"/>
-                            <constraint firstItem="U3L-Uw-QEg" firstAttribute="leading" secondItem="Nb2-EM-e6W" secondAttribute="leading" constant="8" id="SDT-ga-sxE"/>
+                            <constraint firstItem="U3L-Uw-QEg" firstAttribute="leading" secondItem="Nb2-EM-e6W" secondAttribute="leading" constant="16" id="SDT-ga-sxE"/>
+                            <constraint firstItem="Nb2-EM-e6W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U3L-Uw-QEg" secondAttribute="trailing" constant="1" id="et7-Qc-q20"/>
                             <constraint firstItem="U3L-Uw-QEg" firstAttribute="top" secondItem="gnv-Kx-0kw" secondAttribute="bottom" constant="8" id="pHK-Wg-Vmg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nb2-EM-e6W"/>

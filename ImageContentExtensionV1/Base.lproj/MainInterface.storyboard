@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍 You liked this image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-Ag-hr3">
-                                <rect key="frame" x="8" y="221" width="179" height="21"/>
+                                <rect key="frame" x="16" y="221" width="179" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +34,8 @@
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="ai8-yT-111" secondAttribute="bottom" constant="37" id="CEe-n4-AGy"/>
                             <constraint firstItem="ai8-yT-111" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="flF-s7-bl5"/>
                             <constraint firstItem="ai8-yT-111" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="g2v-gq-dGl"/>
-                            <constraint firstItem="b3E-Ag-hr3" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="8" id="sHu-yz-CEj"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b3E-Ag-hr3" secondAttribute="trailing" constant="1" id="oxJ-ZA-v00"/>
+                            <constraint firstItem="b3E-Ag-hr3" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="16" id="sHu-yz-CEj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
                     </view>
