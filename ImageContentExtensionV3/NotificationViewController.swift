@@ -20,10 +20,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         super.viewDidLoad()
         
         likeLabel.isHidden = true
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        imageView.addGestureRecognizer(tapGesture)
-        imageView.isUserInteractionEnabled = true
+        likeButton.layer.opacity = 0.5
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
@@ -31,14 +28,16 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         if likeLabel.isHidden {
             
             likeLabel.isHidden = false
+            likeButton.layer.opacity = 1.0
             
         } else {
             
             likeLabel.isHidden = true
+            likeButton.layer.opacity = 0.5
         }
     }
     
-    @objc func imageTapped() {
+    @IBAction func openAppButtonTapped(_ sender: Any) {
         
         extensionContext?.performNotificationDefaultAction()
     }

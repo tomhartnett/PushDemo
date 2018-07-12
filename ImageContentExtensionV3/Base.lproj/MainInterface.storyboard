@@ -29,23 +29,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You liked this image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlJ-41-d7x">
-                                <rect key="frame" x="46" y="219" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="46" y="225" width="128.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWC-2W-3Yf">
+                                <rect key="frame" x="239" y="219" width="65" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Open App"/>
+                                <connections>
+                                    <action selector="openAppButtonTapped:" destination="Cxj-Ky-9vv" eventType="touchUpInside" id="cbW-h5-AUB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AlJ-41-d7x" firstAttribute="leading" secondItem="VnM-fB-eEU" secondAttribute="trailing" constant="8" id="0k3-lq-2Xy"/>
                             <constraint firstItem="nAS-Gr-jzV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AlJ-41-d7x" secondAttribute="trailing" symbolic="YES" id="5kQ-6R-fFL"/>
                             <constraint firstItem="uoF-wa-BnS" firstAttribute="trailing" secondItem="nAS-Gr-jzV" secondAttribute="trailing" id="6LN-fu-quJ"/>
+                            <constraint firstItem="wWC-2W-3Yf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AlJ-41-d7x" secondAttribute="trailing" constant="8" symbolic="YES" id="6Si-HI-qHj"/>
                             <constraint firstItem="uoF-wa-BnS" firstAttribute="top" secondItem="nAS-Gr-jzV" secondAttribute="top" id="ARS-BG-oRP"/>
                             <constraint firstItem="VnM-fB-eEU" firstAttribute="leading" secondItem="nAS-Gr-jzV" secondAttribute="leading" constant="8" id="Di7-uj-kXI"/>
                             <constraint firstItem="uoF-wa-BnS" firstAttribute="leading" secondItem="nAS-Gr-jzV" secondAttribute="leading" id="FP6-b7-DQ3"/>
+                            <constraint firstItem="wWC-2W-3Yf" firstAttribute="centerY" secondItem="VnM-fB-eEU" secondAttribute="centerY" constant="4" id="SgD-RZ-ku7"/>
                             <constraint firstItem="VnM-fB-eEU" firstAttribute="top" secondItem="uoF-wa-BnS" secondAttribute="bottom" id="TYT-nS-9hv"/>
-                            <constraint firstItem="AlJ-41-d7x" firstAttribute="centerY" secondItem="VnM-fB-eEU" secondAttribute="centerY" id="XJh-XH-yd4"/>
+                            <constraint firstItem="AlJ-41-d7x" firstAttribute="centerY" secondItem="VnM-fB-eEU" secondAttribute="centerY" constant="4" id="XJh-XH-yd4"/>
                             <constraint firstItem="nAS-Gr-jzV" firstAttribute="bottom" secondItem="uoF-wa-BnS" secondAttribute="bottom" constant="41" id="cyq-qT-LgX"/>
+                            <constraint firstItem="nAS-Gr-jzV" firstAttribute="trailing" secondItem="wWC-2W-3Yf" secondAttribute="trailing" constant="16" id="gwp-Eh-xx2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nAS-Gr-jzV"/>
                     </view>
