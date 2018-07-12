@@ -62,6 +62,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             likeLabel.isHidden = false
             
             let unlikeAction = UNNotificationAction(identifier: "unlikeAction", title: "Unlike", options: [.authenticationRequired])
+            // NEW in iOS 12:  use extensionContext?.notificationActions to modify the UNNotificationActions for the
+            // notification from the content extension.
             extensionContext?.notificationActions = [unlikeAction]
         }
         

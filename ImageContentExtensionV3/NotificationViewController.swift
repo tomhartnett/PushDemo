@@ -39,6 +39,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     
     @IBAction func openAppButtonTapped(_ sender: Any) {
         
+        // NEW in iOS 12: perform the default action for tapping on the notification.
+        // You may need to use this if you set UNNotificationExtensionUserInteractionEnabled=YES
+        // in the plist as the notification will no longer dismiss and open the app by tapping on it.
         extensionContext?.performNotificationDefaultAction()
     }
     
