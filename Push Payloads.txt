@@ -1,0 +1,82 @@
+// Demo of grouped notifications
+{
+	"aps": {
+		"alert": {
+			"body": "You can group notifications by thread-id"
+		},
+		"thread-id": "thread-1"
+	}
+}
+
+// Demo of notification service extension
+{
+    "aps": {
+        "alert": "This notification has an image!",
+        "badge": 1,
+		"sound": "default",
+        "mutable-content": 1
+    },
+    "imageUrl": "https://www.famousfootwear.com/ProductImages/shoes_ia77946.jpg?trim.threshold=105&width=600&height=350&paddingWidth=40&anchor=bottomcenter",
+	"alternateText": "Sorry about that, image download failed"
+}
+
+{
+    "aps": {
+        "alert": {
+        	"title": "This notification has a title!",
+        	"body": "And it has an image :)"
+        },
+        "badge": 1,
+		"sound": "default",
+        "mutable-content": 1
+    },
+    "imageUrl": "https://www.famousfootwear.com/ProductImages/shoes_ib78627.jpg?trim.threshold=105&width=600&height=350&paddingWidth=40&anchor=bottomcenter",
+	"alternateText": "Sorry about that, image download failed"
+}
+
+// Demo of notification content extension V1 
+{
+    "aps": {
+        "alert": {
+            "body": "This push has a custom UI",
+            "title": "Content Extensions V1"
+        },
+		"sound": "default",
+        "mutable-content": 1,
+        "category": "imageCategoryV1"
+    },
+    "imageUrl": "https://www.famousfootwear.com/ProductImages/shoes_id78802.jpg?trim.threshold=105&width=600&height=350&paddingWidth=40&anchor=bottomcenter",
+	"alternateText": "Sorry about that, image download failed"
+}
+
+// V2
+{
+    "aps": {
+        "alert": {
+            "body": "This push has a custom UI",
+            "title": "Content Extensions V2"
+        },
+		"sound": "default",
+        "mutable-content": 1,
+        "category": "imageCategoryV2"
+    },
+    "imageUrl": "https://www.famousfootwear.com/ProductImages/shoes_ia78225.jpg?trim.threshold=105&width=600&height=350&paddingWidth=40&anchor=bottomcenter",
+	"alternateText": "Sorry about that, image download failed"
+}
+
+// V3
+{
+    "aps": {
+        "alert": {
+            "body": "This push has a custom UI",
+            "title": "Content Extensions V3"
+        },
+		"sound": "default",
+        "mutable-content": 1,
+        "category": "imageCategoryV3"
+    },
+    "imageUrl": "https://www.famousfootwear.com/ProductImages/shoes_ib78123.jpg?trim.threshold=105&width=600&height=350&paddingWidth=40&anchor=bottomcenter",
+	"alternateText": "Sorry about that, image download failed"
+}
+
+
